@@ -1,0 +1,29 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega2560"</DEVICE>
+ <WORKING_DIR>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m2560def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\Debug\Blink led 13.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Blink led 13.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Blink led 13.map</FILE>
+  <FILE>Blink led 13.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</FILE><LINE>13</LINE></start>
+  <L1><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</FILE><LINE>21</LINE></L1>
+  <L2><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</FILE><LINE>34</LINE></L2>
+ </LABELS>
+</ASSEMBLER_INFO>
