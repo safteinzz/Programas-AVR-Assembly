@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm Sat Mar 21 21:13:45 2020
+AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm Mon Mar 23 15:42:51 2020
 
 
 EQU  SIGNATURE_000 0000001e
@@ -1359,9 +1359,9 @@ EQU  URXC3addr    0000006c
 EQU  UDRE3addr    0000006e
 EQU  UTXC3addr    00000070
 EQU  INT_VECTORS_SIZE 00000072
-CSEG start        00000004
-CSEG forDerecha   00000005
-CSEG fncDelayParam 00000017
-CSEG forIzquierda 0000000e
-CSEG forDelay     0000001d
-CSEG L1           00000020
+CSEG start        00000005
+CSEG forDerecha   00000006
+CSEG fncDelayParam 00000018
+CSEG forIzquierda 0000000f
+CSEG forDelay     0000001e
+CSEG L1           00000021

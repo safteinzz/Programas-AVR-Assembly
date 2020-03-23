@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm Sat Mar 21 21:13:45 2020
+AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm Mon Mar 23 15:42:51 2020
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m2560def.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m2560def.inc'
@@ -1848,76 +1848,77 @@ AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Del
                                  ; Author : SaFteiNZz
                                  ;
                                  
-000000 ef5f                      ldi r21, 0xff
-000001 b95a                      out ddrd, r21
+000000 ef0f                      ldi r16, 0xFF
+000001 b904                      out ddrb, r16
+000002 2700                      clr r16
                                  
-000002 e800                      ldi r16, 0b10000000
-000003 b905                      out portb, r16
+000003 e800                      ldi r16, 0x80
+000004 b905                      out portb, r16
                                  
                                  ; Replace with your application code
                                  start:
-000004 e067                      	ldi r22, 7 ;configuramos las veces que se va a repetir el for
+000005 e067                      	ldi r22, 7 ; nº de repeticiones
                                  
-                                 forDerecha: ;for, mover uno de izquierda a derecha
+                                 forDerecha:
                                  	
-000005 e075                      	LDI R23, 5 ;Cargamos el parámetro en el registro
-000006 937f                      	PUSH R23 ;Guardamos el registro en la pila
-000007 d00f                      	RCALL fncDelayParam //llamada de funcion
-000008 917f                      	POP R23
+000006 e071                      	LDI R23, 1
+000007 937f                      	PUSH R23
+000008 d00f                      	RCALL fncDelayParam
+000009 917f                      	POP R23
                                  	
-000009 9506                          LSR r16 ;desplazamos el numero del registro 16 un byte a la derecha
-00000a b905                      	out portb, r16 ;lo enviamos al puerto d
-00000b 956a                      	DEC r22 ;decremos uno el registro 22
-00000c f7c1                      	BRNE forDerecha ;si el valor anterior no es 0 volvemos al forDerecha
+00000a 9506                          LSR r16 ; Mover bit a la derecha
+00000b b905                      	out portb, r16
+00000c 956a                      	DEC r22
+00000d f7c1                      	BRNE forDerecha
                                  
-00000d e067                      	ldi r22, 7
+00000e e067                      	ldi r22, 7
                                  
-                                 forIzquierda: ;for mover uno de derecha a izquierda
+                                 forIzquierda:
                                  
-00000e e07a                      	LDI R23, 10 ;Cargamos el parámetro en el registro
-00000f 937f                      	PUSH R23 ;Guardamos el registro en la pila
-000010 d006                      	RCALL fncDelayParam //llamada de funcion
-000011 917f                      	POP R23
+00000f e07a                      	LDI R23, 10
+000010 937f                      	PUSH R23
+000011 d006                      	RCALL fncDelayParam
+000012 917f                      	POP R23
                                  	
-000012 0f00                      	LSL r16 ;mover el uno hacia la izquierda
-000013 b905                      	out portb, r16
+000013 0f00                      	LSL r16 ; Mover bit a la izquierda
+000014 b905                      	out portb, r16
                                  
-000014 956a                      	DEC r22 ;decrementar el numero del for
-000015 f7c1                      	BRNE forIzquierda
+000015 956a                      	DEC r22
+000016 f7c1                      	BRNE forIzquierda
                                  
-000016 cfed                          rjmp start ;volver a empezar
+000017 cfed                          rjmp start
                                  
                                  
                                  ; funcion delay con parametro
                                  fncDelayParam:
-000017 93df                      	PUSH YH
-000018 93cf                      	PUSH YL
-000019 b7cd                      	IN YL, SPL
-00001a b7de                      	IN YH, SPH
-00001b 937f                      	PUSH R23
+000018 93df                      	PUSH YH ; Guardar parte alta de Y en la pila
+000019 93cf                      	PUSH YL ; Guardar parte baja de Y en la pila
+00001a b7cd                      	IN YL, SPL ; Inicializamos Y a SP : Parte alta
+00001b b7de                      	IN YH, SPH ; Inicializamos Y a SP : Parte baja
+00001c 937f                      	PUSH R23 ; Backup
                                  
-00001c 817d                      	LDD R23, Y+5
+00001d 817e                      	LDD R23, Y+6 ; Metemos el parametro en R23
                                  
                                  forDelay:
-                                 	;delay 100ms
-00001d e025                      	ldi  r18, 5
-00001e e03f                          ldi  r19, 15
-00001f ef42                          ldi  r20, 242
-000020 954a                      L1: dec  r20
-000021 f7f1                          brne L1
-000022 953a                          dec  r19
-000023 f7e1                          brne L1
-000024 952a                          dec  r18
-000025 f7d1                          brne L1	
+00001e e025                      	ldi  r18, 5
+00001f e03f                          ldi  r19, 15
+000020 ef42                          ldi  r20, 242
+000021 954a                      L1: dec  r20
+000022 f7f1                          brne L1
+000023 953a                          dec  r19
+000024 f7e1                          brne L1
+000025 952a                          dec  r18
+000026 f7d1                          brne L1	
                                  
-000026 957a                      		DEC R23
+000027 957a                      	DEC R23
+000028 f7a9                      	BRNE forDelay
                                  
-000027 f7a9                      	BRNE forDelay
-                                 
-000028 917f                      	POP R23
-000029 91cf                      	POP YL
-00002a 91df                      	POP YH
-00002b 9508                      	RET
+                                 	; Quitar de la pila
+000029 917f                      	POP R23
+00002a 91cf                      	POP YL
+00002b 91df                      	POP YH
+                                 	; Retornar
+00002c 9508                      	RET
                                  
                                  ;fin fncDelayParam
 
@@ -1939,10 +1940,10 @@ counted separately from r26..r31 here.
 "ATmega2560" register use summary:
 x  :   0 y  :   1 z  :   0 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:   6 r17:   0 r18:   2 r19:   2 r20:   2 
-r21:   2 r22:   4 r23:  10 r24:   0 r25:   0 r26:   0 r27:   0 r28:   3 
+r13:   0 r14:   0 r15:   0 r16:   9 r17:   0 r18:   2 r19:   2 r20:   2 
+r21:   0 r22:   4 r23:  10 r24:   0 r25:   0 r26:   0 r27:   0 r28:   3 
 r29:   3 r30:   0 r31:   0 
-Registers used: 10 out of 35 (28.6%)
+Registers used: 9 out of 35 (25.7%)
 
 "ATmega2560" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :   0 add   :   0 adiw  :   0 and   :   0 
@@ -1951,7 +1952,7 @@ brcc  :   0 brcs  :   0 break :   0 breq  :   0 brge  :   0 brhc  :   0
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
 brne  :   6 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :   0 cbr   :   0 
-clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
+clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   1 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
 cpi   :   0 cpse  :   0 dec   :   6 eicall:   0 eijmp :   0 elpm  :   0 
 eor   :   0 fmul  :   0 fmuls :   0 fmulsu:   0 icall :   0 ijmp  :   0 
@@ -1965,12 +1966,12 @@ sbrs  :   0 sec   :   0 seh   :   0 sei   :   0 sen   :   0 ser   :   0
 ses   :   0 set   :   0 sev   :   0 sez   :   0 sleep :   0 spm   :   0 
 st    :   0 std   :   0 sts   :   0 sub   :   0 subi  :   0 swap  :   0 
 tst   :   0 wdr   :   0 
-Instructions used: 13 out of 116 (11.2%)
+Instructions used: 14 out of 116 (12.1%)
 
 "ATmega2560" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000058     88      0     88  262144   0.0%
+[.cseg] 0x000000 0x00005a     90      0     90  262144   0.0%
 [.dseg] 0x000200 0x000200      0      0      0    8192   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    4096   0.0%
 

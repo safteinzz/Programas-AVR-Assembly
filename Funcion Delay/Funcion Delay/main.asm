@@ -5,58 +5,59 @@
 ; Author : SaFteiNZz
 ;
 
-ldi r21, 0xff
-out ddrd, r21
+ldi r16, 0xFF
+out ddrb, r16
+clr r16
 
-ldi r16, 0b10000000
+; Pongo el primer bit a 1 para poder moverlo
+ldi r16, 0x80
 out portb, r16
 
 ; Replace with your application code
 start:
-	ldi r22, 7 ;configuramos las veces que se va a repetir el for
+	ldi r22, 7 ; nº de repeticiones
 
-forDerecha: ;for, mover uno de izquierda a derecha
+forDerecha:
 	
-	LDI R23, 5 ;Cargamos el parámetro en el registro
-	PUSH R23 ;Guardamos el registro en la pila
-	RCALL fncDelayParam //llamada de funcion
+	LDI R23, 1
+	PUSH R23
+	RCALL fncDelayParam
 	POP R23
 	
-    LSR r16 ;desplazamos el numero del registro 16 un byte a la derecha
-	out portb, r16 ;lo enviamos al puerto d
-	DEC r22 ;decremos uno el registro 22
-	BRNE forDerecha ;si el valor anterior no es 0 volvemos al forDerecha
+    LSR r16 ; Mover bit a la derecha
+	out portb, r16
+	DEC r22
+	BRNE forDerecha
 
 	ldi r22, 7
 
-forIzquierda: ;for mover uno de derecha a izquierda
+forIzquierda:
 
-	LDI R23, 10 ;Cargamos el parámetro en el registro
-	PUSH R23 ;Guardamos el registro en la pila
-	RCALL fncDelayParam //llamada de funcion
+	LDI R23, 10
+	PUSH R23
+	RCALL fncDelayParam
 	POP R23
 	
-	LSL r16 ;mover el uno hacia la izquierda
+	LSL r16 ; Mover bit a la izquierda
 	out portb, r16
 
-	DEC r22 ;decrementar el numero del for
+	DEC r22
 	BRNE forIzquierda
 
-    rjmp start ;volver a empezar
+    rjmp start
 
 
 ; funcion delay con parametro
 fncDelayParam:
-	PUSH YH
-	PUSH YL
-	IN YL, SPL
-	IN YH, SPH
-	PUSH R23
+	PUSH YH ; Guardar parte alta de Y en la pila
+	PUSH YL ; Guardar parte baja de Y en la pila
+	IN YL, SPL ; Inicializamos Y a SP : Parte alta
+	IN YH, SPH ; Inicializamos Y a SP : Parte baja
+	PUSH R23 ; Backup
 
-	LDD R23, Y+5
+	LDD R23, Y+6 ; Metemos el parametro en R23
 
 forDelay:
-	;delay 100ms
 	ldi  r18, 5
     ldi  r19, 15
     ldi  r20, 242
@@ -67,13 +68,14 @@ L1: dec  r20
     dec  r18
     brne L1	
 
-		DEC R23
-
+	DEC R23
 	BRNE forDelay
 
+	; Quitar de la pila
 	POP R23
 	POP YL
 	POP YH
+	; Retornar
 	RET
 
 ;fin fncDelayParam
