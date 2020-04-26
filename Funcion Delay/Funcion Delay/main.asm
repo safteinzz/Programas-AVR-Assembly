@@ -6,12 +6,12 @@
 ;
 
 ldi r16, 0xFF
-out ddrb, r16
+out DDRF, r16
 clr r16
 
 ; Pongo el primer bit a 1 para poder moverlo
 ldi r16, 0x80
-out portb, r16
+out PORTF, r16
 
 ; Replace with your application code
 start:
@@ -25,7 +25,7 @@ forDerecha:
 	POP R23
 	
     LSR r16 ; Mover bit a la derecha
-	out portb, r16
+	out PORTF, r16
 	DEC r22
 	BRNE forDerecha
 
@@ -39,7 +39,7 @@ forIzquierda:
 	POP R23
 	
 	LSL r16 ; Mover bit a la izquierda
-	out portb, r16
+	out PORTF, r16
 
 	DEC r22
 	BRNE forIzquierda

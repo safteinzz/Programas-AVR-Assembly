@@ -22,8 +22,8 @@
   <FILE>Blink led 13.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <start><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</FILE><LINE>13</LINE></start>
-  <L1><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</FILE><LINE>21</LINE></L1>
-  <L2><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</FILE><LINE>34</LINE></L2>
+  <start><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</FILE><LINE>12</LINE></start>
+  <L1><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</FILE><LINE>20</LINE></L1>
+  <L2><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm</FILE><LINE>33</LINE></L2>
  </LABELS>
 </ASSEMBLER_INFO>

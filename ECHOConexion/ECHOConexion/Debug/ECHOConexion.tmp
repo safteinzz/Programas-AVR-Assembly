@@ -1,0 +1,31 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega2560"</DEVICE>
+ <WORKING_DIR>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\ECHOConexion\ECHOConexion\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\ECHOConexion\ECHOConexion\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m2560def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\ECHOConexion\ECHOConexion\Debug\ECHOConexion.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>ECHOConexion.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>ECHOConexion.map</FILE>
+  <FILE>ECHOConexion.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\ECHOConexion\ECHOConexion\main.asm</FILE><LINE>21</LINE></main>
+  <USART_Init><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\ECHOConexion\ECHOConexion\main.asm</FILE><LINE>27</LINE></USART_Init>
+  <bucle><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\ECHOConexion\ECHOConexion\main.asm</FILE><LINE>50</LINE></bucle>
+  <TX><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\ECHOConexion\ECHOConexion\main.asm</FILE><LINE>56</LINE></TX>
+  <RX><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\ECHOConexion\ECHOConexion\main.asm</FILE><LINE>65</LINE></RX>
+ </LABELS>
+</ASSEMBLER_INFO>

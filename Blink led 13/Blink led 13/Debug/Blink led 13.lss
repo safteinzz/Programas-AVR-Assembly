@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm Sun Mar 22 11:41:29 2020
+AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 13\Blink led 13\main.asm Sat Apr 04 12:32:02 2020
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m2560def.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m2560def.inc'
@@ -1847,41 +1847,40 @@ AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Blink led 1
                                  ; Created: 21/03/2020 20:36:31
                                  ; Author : SaFteiNZz
                                  ;
+                                 //ESTO HA SIDO EDITADO PARA PRUEBAS
                                  
-                                 
-000000 e800                      ldi r16, 0x80
-000001 b904                      out ddrb, r16
-000002 2700                      clr r16
+000000 ef0f                      ldi r16, 0xFF
+000001 bb00                      out ddrf, r16
                                  
                                  start:
-000003 e800                      	ldi r16, 0x80
-000004 b905                      	out portb, r16
+000002 ef0f                      	ldi r16, 0xFF
+000003 bb01                      	out portf, r16
                                  	; 1s 400ms at 16 MHz
                                  
-000005 e722                          ldi  r18, 114
-000006 ea33                          ldi  r19, 163
-000007 e94c                          ldi  r20, 156
-000008 954a                      L1: dec  r20
-000009 f7f1                          brne L1
-00000a 953a                          dec  r19
-00000b f7e1                          brne L1
-00000c 952a                          dec  r18
-00000d f7d1                          brne L1
+000004 e722                          ldi  r18, 114
+000005 ea33                          ldi  r19, 163
+000006 e94c                          ldi  r20, 156
+000007 954a                      L1: dec  r20
+000008 f7f1                          brne L1
+000009 953a                          dec  r19
+00000a f7e1                          brne L1
+00000b 952a                          dec  r18
+00000c f7d1                          brne L1
                                  
-00000e 2700                      	clr r16
-00000f b905                      	out portb, r16
+00000d 2700                      	clr r16
+00000e bb01                      	out portf, r16
                                  
-000010 e722                      	ldi  r18, 114
-000011 ea33                          ldi  r19, 163
-000012 e94c                          ldi  r20, 156
-000013 954a                      L2: dec  r20
-000014 f7f1                          brne L2
-000015 953a                          dec  r19
-000016 f7e1                          brne L2
-000017 952a                          dec  r18
-000018 f7d1                          brne L2
+00000f e722                      	ldi  r18, 114
+000010 ea33                          ldi  r19, 163
+000011 e94c                          ldi  r20, 156
+000012 954a                      L2: dec  r20
+000013 f7f1                          brne L2
+000014 953a                          dec  r19
+000015 f7e1                          brne L2
+000016 952a                          dec  r18
+000017 f7d1                          brne L2
                                  
-000019 cfe9                          rjmp start
+000018 cfe9                          rjmp start
                                  
 
 
@@ -1902,7 +1901,7 @@ counted separately from r26..r31 here.
 "ATmega2560" register use summary:
 x  :   0 y  :   0 z  :   0 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:   7 r17:   0 r18:   4 r19:   4 r20:   4 
+r13:   0 r14:   0 r15:   0 r16:   6 r17:   0 r18:   4 r19:   4 r20:   4 
 r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
 r29:   0 r30:   0 r31:   0 
 Registers used: 4 out of 35 (11.4%)
@@ -1914,7 +1913,7 @@ brcc  :   0 brcs  :   0 break :   0 breq  :   0 brge  :   0 brhc  :   0
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
 brne  :   6 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :   0 cbr   :   0 
-clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   2 cls   :   0 
+clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   1 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
 cpi   :   0 cpse  :   0 dec   :   6 eicall:   0 eijmp :   0 elpm  :   0 
 eor   :   0 fmul  :   0 fmuls :   0 fmulsu:   0 icall :   0 ijmp  :   0 
@@ -1933,7 +1932,7 @@ Instructions used: 6 out of 116 (5.2%)
 "ATmega2560" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000034     52      0     52  262144   0.0%
+[.cseg] 0x000000 0x000032     50      0     50  262144   0.0%
 [.dseg] 0x000200 0x000200      0      0      0    8192   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    4096   0.0%
 

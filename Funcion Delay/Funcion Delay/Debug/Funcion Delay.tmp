@@ -22,11 +22,11 @@
   <FILE>Funcion Delay.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <start><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>16</LINE></start>
-  <forDerecha><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>19</LINE></forDerecha>
-  <fncDelayParam><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>50</LINE></fncDelayParam>
-  <forIzquierda><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>33</LINE></forIzquierda>
-  <forDelay><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>59</LINE></forDelay>
-  <L1><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>63</LINE></L1>
+  <start><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>17</LINE></start>
+  <forDerecha><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>20</LINE></forDerecha>
+  <fncDelayParam><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>51</LINE></fncDelayParam>
+  <forIzquierda><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>34</LINE></forIzquierda>
+  <forDelay><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>60</LINE></forDelay>
+  <L1><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm</FILE><LINE>64</LINE></L1>
  </LABELS>
 </ASSEMBLER_INFO>

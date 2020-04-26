@@ -1,0 +1,41 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega2560"</DEVICE>
+ <WORKING_DIR>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m2560def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\Debug\BlinkEchoParImpar.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>BlinkEchoParImpar.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>BlinkEchoParImpar.map</FILE>
+  <FILE>BlinkEchoParImpar.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <PPrincipal><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>29</LINE></PPrincipal>
+  <USART0_reception_completed><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>69</LINE></USART0_reception_completed>
+  <init_USART0><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>45</LINE></init_USART0>
+  <loop><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>38</LINE></loop>
+  <delay1sec><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>146</LINE></delay1sec>
+  <ECHO><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>123</LINE></ECHO>
+  <NoEsCero><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>104</LINE></NoEsCero>
+  <SiEsCero><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>90</LINE></SiEsCero>
+  <EstaEncendido><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>98</LINE></EstaEncendido>
+  <EstaApagado><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>95</LINE></EstaApagado>
+  <fin><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>114</LINE></fin>
+  <principio_if><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>105</LINE></principio_if>
+  <else_if><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>110</LINE></else_if>
+  <TX><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>131</LINE></TX>
+  <L1><FILE>C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\BlinkEchoParImpar\BlinkEchoParImpar\main.asm</FILE><LINE>150</LINE></L1>
+ </LABELS>
+</ASSEMBLER_INFO>

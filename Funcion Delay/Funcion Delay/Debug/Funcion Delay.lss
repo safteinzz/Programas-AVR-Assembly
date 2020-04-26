@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm Mon Mar 23 15:42:51 2020
+AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Delay\Funcion Delay\main.asm Fri Apr 03 22:59:12 2020
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m2560def.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m2560def.inc'
@@ -1849,11 +1849,12 @@ AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Del
                                  ;
                                  
 000000 ef0f                      ldi r16, 0xFF
-000001 b904                      out ddrb, r16
+000001 bb00                      out DDRF, r16
 000002 2700                      clr r16
                                  
+                                 ; Pongo el primer bit a 1 para poder moverlo
 000003 e800                      ldi r16, 0x80
-000004 b905                      out portb, r16
+000004 bb01                      out PORTF, r16
                                  
                                  ; Replace with your application code
                                  start:
@@ -1867,7 +1868,7 @@ AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Del
 000009 917f                      	POP R23
                                  	
 00000a 9506                          LSR r16 ; Mover bit a la derecha
-00000b b905                      	out portb, r16
+00000b bb01                      	out PORTF, r16
 00000c 956a                      	DEC r22
 00000d f7c1                      	BRNE forDerecha
                                  
@@ -1881,7 +1882,7 @@ AVRASM ver. 2.2.7  C:\Users\SaFteiNZz\Documents\GitHub\Programas-AVR\Funcion Del
 000012 917f                      	POP R23
                                  	
 000013 0f00                      	LSL r16 ; Mover bit a la izquierda
-000014 b905                      	out portb, r16
+000014 bb01                      	out PORTF, r16
                                  
 000015 956a                      	DEC r22
 000016 f7c1                      	BRNE forIzquierda

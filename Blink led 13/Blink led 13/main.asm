@@ -4,15 +4,14 @@
 ; Created: 21/03/2020 20:36:31
 ; Author : SaFteiNZz
 ;
+//ESTO HA SIDO EDITADO PARA PRUEBAS
 
-
-ldi r16, 0x80
-out ddrb, r16
-clr r16
+ldi r16, 0xFF
+out ddrf, r16
 
 start:
-	ldi r16, 0x80
-	out portb, r16
+	ldi r16, 0xFF
+	out portf, r16
 	; 1s 400ms at 16 MHz
 
     ldi  r18, 114
@@ -26,7 +25,7 @@ L1: dec  r20
     brne L1
 
 	clr r16
-	out portb, r16
+	out portf, r16
 
 	ldi  r18, 114
     ldi  r19, 163
